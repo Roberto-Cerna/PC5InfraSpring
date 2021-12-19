@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: roberto-springboot
+  name: robert-springboot
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: roberto-springboot
+      app: robert-springboot
   template:
     metadata:
       labels:
-        app: roberto-springboot
+        app: robert-springboot
     spec:
       containers:
         - name: springboot
@@ -24,11 +24,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: roberto-springboot
+  name: robert-springboot
 spec:
   type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8080
   selector:
-    app: roberto-springboot
+    app: robert-springboot

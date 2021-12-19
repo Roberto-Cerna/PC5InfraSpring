@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  roberto-springboot-container:
-    image: roberto-spring-boot-docker-compose:1
+  jhooq-springboot-container:
+    image: jhooq-spring-boot-docker-compose:1
     build:
       context: ./
       dockerfile: Dockerfile
     volumes:
-      - /data/roberto-springboot-container
+      - /data/jhooq-springboot-container
     ports:
       - "8080-8100:8080"
